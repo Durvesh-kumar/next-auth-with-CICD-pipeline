@@ -46,8 +46,9 @@ jobs:
                 echo "Running build the project...."
                 bun run build
             
-            - name: Save build artifacts
-              uses: actions/upload-artifact@v3
+            - name: "Save build artifacts"
+              uses: actions/upload-artifact@v4
+              
               with:
                 name: nextjs-build
                 path: .next 
