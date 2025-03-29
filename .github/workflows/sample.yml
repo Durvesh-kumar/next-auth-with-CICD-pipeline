@@ -1,0 +1,69 @@
+name: "Next-auth with nextjs"
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Setup node version"
+              uses: actions/setup-node@v4
+              with:
+                node-version: '22.14.0'
+
+            - name: "Check node version"
+              run: |
+               echo "Running check node version...."
+               node --version
+
+            - name: "Clone repository"
+              uses: actions/checkout@v3
+
+            - name: "List directories"
+              run: ls
+
+            - name: "Install dependencies"
+              run: |
+               echo "Running install dependencies"
+               npm install
+
+            - name: "List directories"
+              run: ls
+
+            - name: "Run lint"
+              run: npm run lint
+              env: 
+                CI: true
+
+            - name: "Run test"
+              run: npm run test
+
+            - name: "Run build"
+              run: |
+                echo "Running build the project...."
+                bun run build
+            
+            - name: Save build artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                name: nextjs-build
+                path: .next 
+
+    security-check:
+        name: "Security Check"
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Check for security"
+              run: |
+                echo "Running security checks....."
+                sleep 5s;
+                echo "Running security checks....."
+                sleep 5s;
+                echo "Running security checks....."
+                sleep 5s;
+                echo "Running security checks....."
+                sleep 5s;
