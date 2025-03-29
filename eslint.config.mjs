@@ -7,11 +7,11 @@ const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-  "plugins": ["react-hooks"],
-  "rules": {
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
-    }
+  // "plugins": ["react-hooks"],
+  // "rules": {
+  //       "react-hooks/rules-of-hooks": "error",
+  //       "react-hooks/exhaustive-deps": "warn"
+  //   }
 });
 
 

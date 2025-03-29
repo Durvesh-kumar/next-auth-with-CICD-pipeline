@@ -30,7 +30,7 @@ const FormSchema = z.object({
   }),
 });
 
-export default function page() {
+export default function Page() {
 
   const params = useParams<{verifyOtp:string}>()
   

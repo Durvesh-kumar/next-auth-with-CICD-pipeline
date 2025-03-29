@@ -5,7 +5,7 @@ import LogInGoogle from './components/LogInGoogle'
 import LoginPassword from './components/LogInPassword'
 import Loader from '@/app/components/Loader'
 
-export default function page() {
+export default function Page() {
   const [loading, setLoading] = useState(false)
   return loading ? <Loader /> :  (
     <div className='w-full flex justify-center mt-20'>
