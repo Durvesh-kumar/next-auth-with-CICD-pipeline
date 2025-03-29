@@ -28,7 +28,7 @@ const FormSchema = z.object({
     .email(),
 });
 
-export default function page() {
+export default function Page() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const form = useForm<z.infer<typeof FormSchema>>({

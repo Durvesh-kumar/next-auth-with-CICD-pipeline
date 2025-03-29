@@ -30,7 +30,7 @@ const FormSchema = z
     message: "Password and Confirm password does not meatch",
   });
 
-export default function page() {
+export default function Page() {
   const params = useParams<{ userPassword: string }>();
 
   const email = params.userPassword;
