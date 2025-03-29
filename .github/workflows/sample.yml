@@ -48,16 +48,21 @@ jobs:
               run: |
                 echo "Running build the project...."
                 npm run build
-
+            
             - name: "List directories after build"
+              run: ls -la
+            
+            - name: "Print working directory"
+              run: pwd
+            
+            - name: "Verify .next directory"
               run: ls -la .next
             
             - name: "Save build artifacts"
               uses: actions/upload-artifact@v4
-              
               with:
                 name: nextjs-build
-                path: .next 
+                path: .next
 
     security-check:
         name: "Security Check"
