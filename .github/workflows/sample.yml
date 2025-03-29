@@ -36,14 +36,6 @@ jobs:
             - name: "Install --save-dev"
               run: npm install eslint-plugin-react-hooks --save-dev
 
-            - name: "Install vitest library"
-              run: |
-               echo "Running install testing dependencies"
-               # Using TypeScript
-               npm install -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom vite-tsconfig-paths
-               # Using JavaScript
-               npm install -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom
-
             - name: "Run lint"
               run: npm run lint
               env: 
