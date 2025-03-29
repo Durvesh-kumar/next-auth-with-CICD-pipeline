@@ -48,6 +48,9 @@ jobs:
               run: |
                 echo "Running build the project...."
                 npm run build
+
+            - name: "List directories after build"
+              run: ls -la
             
             - name: "Save build artifacts"
               uses: actions/upload-artifact@v4
