@@ -5,7 +5,7 @@ import Loader from '@/app/components/Loader'
 import UpGoogle from './components/UpGoogle'
 import UpFacebook from './components/UpFacebook'
 
-export default function page() {
+export default function Page() {
   const [loading, setLoading] = useState(false)
   return loading ? <Loader/> : (
     <div className='w-full flex justify-center mt-20'>
