@@ -47,7 +47,7 @@ jobs:
             - name: "Run build"
               run: |
                 echo "Running build the project...."
-                bun run build
+                npm run build
             
             - name: "Save build artifacts"
               uses: actions/upload-artifact@v4
