@@ -1,8 +1,9 @@
-import { expect, test } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import Home from '@/app/(dashboard)/page'
- 
-test('Home', () => {
-  render(<Home />)
-  expect(screen.getByRole('heading', { level: 1, name: 'Home' })).toBeDefined()
-})
+import Home from "@/app/(dashboard)/page";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+// import Home from "../pages/index"; // Adjust the import to match your component
+
+test("renders home page", () => {
+    render(<Home />);
+    expect(screen.getByText("Welcome")).toBeInTheDocument();
+});
