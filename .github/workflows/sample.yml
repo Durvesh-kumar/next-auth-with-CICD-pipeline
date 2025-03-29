@@ -33,6 +33,9 @@ jobs:
             - name: "List directories"
               run: ls
 
+            - name: "Install --save-dev"
+              run: npm install eslint-plugin-react-hooks --save-dev
+
             - name: "Run lint"
               run: npm run lint
               env: 
