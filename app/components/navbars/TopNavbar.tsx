@@ -3,8 +3,6 @@ import { auth } from "@/auth";
 import Image from "next/image";
 import { ModeToggle } from "../themes/ModeToggle";
 import HomeLogo from "../logos/Home.d";
-import { Button } from "@/components/ui/button";
-import { logOut } from "@/lib/actions/auth";
 import LogOut from "./components/LogOut";
 
 export default async function TopNavbar() {
