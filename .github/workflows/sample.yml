@@ -56,13 +56,13 @@ jobs:
               run: pwd
             
             - name: "Verify .next directory"
-              run: ls -la .next
+              run: ls -la build
             
             - name: "Save build artifacts"
               uses: actions/upload-artifact@v4
               with:
                 name: nextjs-build
-                path: .next
+                path: build
 
     security-check:
         name: "Security Check"
