@@ -54,6 +54,9 @@ jobs:
             
             - name: "Print working directory"
               run: pwd
+
+            - name: "Create .next directory"
+              run: mkdir .next
             
             - name: "Verify .next directory"
               run: ls -la .next || echo ".next directory not found"
