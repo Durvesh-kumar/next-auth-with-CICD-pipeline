@@ -18,13 +18,15 @@ jest.mock("bcryptjs", () => ({
 }));
 
 describe("POST /api/forgot-password/update-password", () => {
-  const mockJson = jest.fn();
   const mockNextResponse = {
-    json: mockJson,
+    json: jest.fn(),
   };
-
-  beforeEach(() => {
-    jest.clearAllMocks();
+  
+  // Example usage in a test
+  expect(mockNextResponse.json).toHaveBeenCalledWith({
+    message: "Expected message",
+    success: true,
+    error: false,
   });
 
   it("should return 400 if required fields are missing", async () => {
