@@ -65,7 +65,7 @@ jobs:
                 name: nextjs-build
                 include-hidden-files: true
                 path: .next
-                if-no-files-found: warn
+                # if-no-files-found: warn
 
     security-check:
         name: "Security Check"
