@@ -62,7 +62,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 name: nextjs-build
-                path: build
+                path: .next
 
     security-check:
         name: "Security Check"
